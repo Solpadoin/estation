@@ -21,6 +21,14 @@ class Station extends Model
         return ucfirst($value);
     }
 
+    public function getLatitudeAttribute($value){
+        return ucfirst($value);
+    }
+
+    public function getLongtitudeAttribute($value){
+        return ucfirst($value);
+    }
+
     public function getFromCity($city_name){
         return $this->where('city', 'LIKE', '%' . $city_name . '%')->get();
     }

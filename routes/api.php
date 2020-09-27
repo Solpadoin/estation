@@ -22,4 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 */
 
 Route::apiResource('/stations', EStationController::class);
+
 Route::get('/stations/city/{city_name}/{open?}', [EStationController::class, 'getFromCity']);
+Route::get('/stations/city/{city_name}/{latitude}/{longitude}', [EStationController::class, 'getClosestStation']);

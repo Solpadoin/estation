@@ -39,8 +39,30 @@ class EStationController extends Controller
         return response()->json($station->getFilteredResponse($city_name, $open));
     }
 
-    public function getClosestStation(){
+    public function getClosestStation($city_name, $latitude, $longitude){
         $station = new Station();
 
+        $response = $station->getFilteredResponse($city_name, true); // always filter closed
+        $prefer_element = $response->first();
+
+        if ($latitude && $longitude){
+            $closest_delta_a = 99999;
+            $closest_delta_b = $closest_delta_a;
+
+            foreach($response as $element){
+                $delta_a = abs($latitude - $element->latitude);
+                $delta_b = abs($longitude - $element->longitude);
+
+                if ($delta_a < $closest_delta_a) {
+                    $closest_delta_a = $delta_a;
+                    if ($delta_b < $closest_delta_b){
+                        $closest_delta_b = $delta_b;
+                        $prefer_element = $element;
+                    }
+                }
+            }
+        }
+
+        return $prefer_element;
     }
 }
