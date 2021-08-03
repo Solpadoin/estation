@@ -4,10 +4,5 @@ This is an API Service which has JSON API and you can create, update, delete, ge
 There is also you can search and recieve items at any radius and latitude and longtitude you like.
 
 ## Examples
-![alt text](https://github.com/Solpadoin/estation/blob/master/public/img/dj6VsZU - Imgur.png?raw=true)
-![alt text](https://github.com/Solpadoin/estation/blob/master/public/img/dj6VsZU - Imgur.png?raw=true)
-![alt text](https://github.com/Solpadoin/estation/blob/master/public/img/dj6VsZU - Imgur.png?raw=true)
 
-![Alt text](public/img/dj6VsZU - Imgur.png?raw=true "Example")
-
-![alt text](https://imgur.com/hUMtGuC)
+You can find examples in public/img directory.
