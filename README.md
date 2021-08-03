@@ -18,6 +18,7 @@ You can use Dependency Injection in the project to use it. There is example of i
 ## Test Records
 
 To make fake records you can use seeder. Use 'php artisan db:seed' command to process new fake records in DB.
+There is export file for POSTMAN included in root directory. You can import this file to recieve test samples.
 
 ## Search Functionality
 
