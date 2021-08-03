@@ -14,15 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::group([
-    'prefix' => '/stations',
-],
-    function () {
-        Route::post('', [EStationController::class, 'create'])->name('create');
-        Route::get('', [EStationController::class, 'get'])->name('get');
-        Route::get('/{id}', [EStationController::class, 'getById'])->name('getById');
-        Route::put('/{id}', [EStationController::class, 'update'])->name('update');
-        Route::delete('/{id}', [EStationController::class, 'delete'])->name('delete');
-    });
-*/
+Route::get('/', [Controller::class, 'index']);

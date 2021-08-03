@@ -10,4 +10,9 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function index()
+    {
+        return response()->json(['success' => true, 'name' => config('app.name'), 'version' => config('app.version')]);
+    }
 }

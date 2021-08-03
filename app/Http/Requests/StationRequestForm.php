@@ -6,6 +6,26 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StationRequestForm extends FormRequest
 {
+    const RULES = [
+
+    ];
+    
+    const RULES_POST = [
+        'city'          => 'required',
+        'hour_start'    => 'required',
+        'hour_end'      => 'required',
+        'latitude'      => 'required',
+        'longitude'     => 'required'
+    ];
+
+    const RULES_PUT = [
+
+    ];
+
+    const RULES_DELETE = [
+
+    ];
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -23,28 +43,16 @@ class StationRequestForm extends FormRequest
      */
     public function rules()
     {
-        $rules_post =  [
-            'city' => 'required',
-            'hour_start' => 'required',
-            'hour_end' => 'required',
-            'latitude' => 'required',
-            'longitude' => 'required'
-        ];
-
-        $rules_update =  [
-        ];
-
-        $rules_delete =  [
-        ];
-
         switch ($this->getMethod())
         {
             case 'POST':
-                return $rules_post;
+                return self::RULES_POST;
             case 'PUT':
-                return $rules_update;
+                return self::RULES_PUT;
             case 'DELETE':
-                return $rules_delete;
+                return self::RULES_DELETE;
+            default:
+                return self::RULES;
         }
     }
 }

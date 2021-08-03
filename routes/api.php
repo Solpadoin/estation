@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\EStationController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\EStationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,13 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-*/
-
 Route::apiResource('/stations', EStationController::class);
 
-Route::get('/stations/city/{city_name}/{open?}', [EStationController::class, 'getFromCity']);
-Route::get('/stations/city/{city_name}/{latitude}/{longitude}', [EStationController::class, 'getClosestStation']);
+Route::get('/version', [EStationController::class, 'version']);
+
+Route::get('/station/location', [EStationController::class, 'closest']);
+Route::get('/station/search', [EStationController::class, 'search']);
