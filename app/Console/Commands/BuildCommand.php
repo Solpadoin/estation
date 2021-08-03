@@ -7,6 +7,23 @@ use Illuminate\Console\Command;
 class BuildCommand extends Command
 {
     /**
+     * List of commands that needs to be run.
+     *
+     */
+    const APP_CMDS = [
+        'route:cache',
+        'migrate',
+        'view:cache',
+        'key:generate'
+    ];
+
+    /**
+     * The answer as a default value for question.
+     *
+     */
+    const DEFAULT_ANSWER = 'yes';
+
+    /**
      * The name and signature of the console command.
      *
      * @var string
@@ -30,13 +47,6 @@ class BuildCommand extends Command
         parent::__construct();
     }
 
-    const APP_CMDS = [
-        'route:cache',
-        'migrate',
-        'view:cache',
-        'key:generate'
-    ];
-
     private function build()
     {
         foreach (self::APP_CMDS as $value) {
@@ -51,7 +61,7 @@ class BuildCommand extends Command
      */
     public function handle()
     {
-        if ($this->ask('Do you want to build current project?', 'yes')) {
+        if ($this->ask('Do you want to build current project?', self::DEFAULT_ANSWER)) {
             $this->build();
         }
 

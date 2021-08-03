@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [Controller::class, 'index']);
+Route::get('/plugin', [Controller::class, 'extensionInfo']);

@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Extensions\Loaded;
+
+use App\Extensions\Kernel as ExtensionKernel;
+
+class ReplaceClass extends ExtensionKernel
+{
+    const EXTENSION_NAME = "ReplaceClass";
+
+	public function handle()
+    {
+        parent::handle();
+        $this->run();
+    }
+
+    /* Entry Point */
+    public function run()
+    {
+        return 0;
+    }
+}
