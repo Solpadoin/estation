@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>E-station</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../docs/css/theme-default.style.css" media="screen">
+    <link rel="stylesheet" href="../docs/css/theme-default.print.css" media="print">
+    <script src="../docs/js/theme-default-3.8.0.js"></script>
+
+    <link rel="stylesheet"
+          href="//unpkg.com/@highlightjs/cdn-assets@10.7.2/styles/obsidian.min.css">
+    <script src="//unpkg.com/@highlightjs/cdn-assets@10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script src="//cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script>
+        var baseUrl = "http://estation";
+    </script>
+    <script src="../docs/js/tryitout-3.8.0.js"></script>
+
+</head>
+
+<body data-languages="[&quot;javascript&quot;,&quot;bash&quot;,&quot;php&quot;,&quot;python&quot;]">
+<a href="#" id="nav-button">
+      <span>
+        MENU
+        <img src="../docs/images/navbar.png" alt="navbar-image" />
+      </span>
+</a>
+<div class="tocify-wrapper">
+                <div class="lang-selector">
+                            <a href="#" data-language-name="javascript">javascript</a>
+                            <a href="#" data-language-name="bash">bash</a>
+                            <a href="#" data-language-name="php">php</a>
+                            <a href="#" data-language-name="python">python</a>
+                    </div>
+        <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="../docs/collection.json">View Postman collection</a></li>
+                            <li><a href="../docs/openapi.yaml">View OpenAPI spec</a></li>
+                            <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
+                    </ul>
+            <ul class="toc-footer" id="last-updated">
+            <li>Last updated: August 6 2021</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Introduction</h1>
+<p>API documentation for Estation API Service.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://estation</code></pre>
+
+        <h1>Authenticating requests</h1>
+<p>This API is not authenticated.</p>
+
+        <h1 id="endpoints">Endpoints</h1>
+
+    
+
+            <h2 id="endpoints-GETapi-station-location">GET api/station/location</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-station-location">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/station/location"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://estation/api/station/location" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://estation/api/station/location',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/station/location'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-GETapi-station-location">
+            <blockquote>
+            <p>Example response (501):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 56
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;radius, longitude, latitude is required!&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-station-location" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-station-location"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-station-location"></code></pre>
+</span>
+<span id="execution-error-GETapi-station-location" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-station-location"></code></pre>
+</span>
+<form id="form-GETapi-station-location" data-method="GET"
+      data-path="api/station/location"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-station-location', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-station-location"
+                    onclick="tryItOut('GETapi-station-location');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-station-location"
+                    onclick="cancelTryOut('GETapi-station-location');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-station-location" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/station/location</code></b>
+        </p>
+                    </form>
+
+        <h1 id="restful-api">RESTFul API</h1>
+
+    
+
+            <h2 id="restful-api-GETapi-stations">GET api/stations</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-stations">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/stations"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://estation/api/stations" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://estation/api/stations',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/stations'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-GETapi-stations">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 59
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;items&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;10:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;50.45&quot;,
+            &quot;longitude&quot;: 30.52,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: &quot;2021-08-03T07:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;city&quot;: &quot;Kharkiv&quot;,
+            &quot;hour_start&quot;: &quot;10:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;50.45&quot;,
+            &quot;longitude&quot;: 90.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:17:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:17:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;city&quot;: &quot;Lviv&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;32.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:19:10.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:19:10.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;city&quot;: &quot;Zhytomir&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;23:00:00&quot;,
+            &quot;latitude&quot;: &quot;52.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:20:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:20:27.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;36.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:30:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:30:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;00:00:00&quot;,
+            &quot;hour_end&quot;: &quot;02:00:00&quot;,
+            &quot;latitude&quot;: &quot;350.45&quot;,
+            &quot;longitude&quot;: 125.56,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;city&quot;: &quot;West Heloisehaven&quot;,
+            &quot;hour_start&quot;: &quot;09:02:52&quot;,
+            &quot;hour_end&quot;: &quot;12:05:59&quot;,
+            &quot;latitude&quot;: &quot;-393.35&quot;,
+            &quot;longitude&quot;: 291.72,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;city&quot;: &quot;Ryleightown&quot;,
+            &quot;hour_start&quot;: &quot;23:01:34&quot;,
+            &quot;hour_end&quot;: &quot;07:09:33&quot;,
+            &quot;latitude&quot;: &quot;24.21&quot;,
+            &quot;longitude&quot;: 165.58,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;city&quot;: &quot;Corwinberg&quot;,
+            &quot;hour_start&quot;: &quot;03:10:56&quot;,
+            &quot;hour_end&quot;: &quot;03:12:38&quot;,
+            &quot;latitude&quot;: &quot;-673.32&quot;,
+            &quot;longitude&quot;: 205.43,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;city&quot;: &quot;Lake Susanaport&quot;,
+            &quot;hour_start&quot;: &quot;00:04:59&quot;,
+            &quot;hour_end&quot;: &quot;05:07:17&quot;,
+            &quot;latitude&quot;: &quot;647.86&quot;,
+            &quot;longitude&quot;: -675.36,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;city&quot;: &quot;North Molliefort&quot;,
+            &quot;hour_start&quot;: &quot;01:02:48&quot;,
+            &quot;hour_end&quot;: &quot;18:06:05&quot;,
+            &quot;latitude&quot;: &quot;-492.46&quot;,
+            &quot;longitude&quot;: -16.33,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;city&quot;: &quot;South Keeleyberg&quot;,
+            &quot;hour_start&quot;: &quot;12:12:11&quot;,
+            &quot;hour_end&quot;: &quot;07:12:56&quot;,
+            &quot;latitude&quot;: &quot;421.18&quot;,
+            &quot;longitude&quot;: -88.92,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;city&quot;: &quot;Port Hettie&quot;,
+            &quot;hour_start&quot;: &quot;11:04:36&quot;,
+            &quot;hour_end&quot;: &quot;12:09:41&quot;,
+            &quot;latitude&quot;: &quot;-284.22&quot;,
+            &quot;longitude&quot;: -291.35,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;city&quot;: &quot;Nyasiaville&quot;,
+            &quot;hour_start&quot;: &quot;10:08:48&quot;,
+            &quot;hour_end&quot;: &quot;14:03:46&quot;,
+            &quot;latitude&quot;: &quot;267.6&quot;,
+            &quot;longitude&quot;: -361.2,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;city&quot;: &quot;Port Vicenteton&quot;,
+            &quot;hour_start&quot;: &quot;13:04:41&quot;,
+            &quot;hour_end&quot;: &quot;23:10:22&quot;,
+            &quot;latitude&quot;: &quot;-133.82&quot;,
+            &quot;longitude&quot;: -811.45,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;city&quot;: &quot;Paucekstad&quot;,
+            &quot;hour_start&quot;: &quot;21:05:29&quot;,
+            &quot;hour_end&quot;: &quot;08:11:55&quot;,
+            &quot;latitude&quot;: &quot;-936.54&quot;,
+            &quot;longitude&quot;: 154.02,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-stations" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-stations"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-stations"></code></pre>
+</span>
+<span id="execution-error-GETapi-stations" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-stations"></code></pre>
+</span>
+<form id="form-GETapi-stations" data-method="GET"
+      data-path="api/stations"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-stations', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-stations"
+                    onclick="tryItOut('GETapi-stations');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-stations"
+                    onclick="cancelTryOut('GETapi-stations');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-stations" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/stations</code></b>
+        </p>
+                    </form>
+
+            <h2 id="restful-api-POSTapi-stations">POST api/stations</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-POSTapi-stations">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/stations"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request POST \
+    "http://estation/api/stations" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;post(
+    'http://estation/api/stations',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/stations'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('POST', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-POSTapi-stations">
+</span>
+<span id="execution-results-POSTapi-stations" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-stations"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-stations"></code></pre>
+</span>
+<span id="execution-error-POSTapi-stations" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-stations"></code></pre>
+</span>
+<form id="form-POSTapi-stations" data-method="POST"
+      data-path="api/stations"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-stations', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-stations"
+                    onclick="tryItOut('POSTapi-stations');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-stations"
+                    onclick="cancelTryOut('POSTapi-stations');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-stations" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/stations</code></b>
+        </p>
+                    </form>
+
+            <h2 id="restful-api-GETapi-stations--id-">GET api/stations/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-stations--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/stations/2"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://estation/api/stations/2" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://estation/api/stations/2',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/stations/2'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-GETapi-stations--id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 58
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;payload&quot;: {
+        &quot;id&quot;: &quot;1&quot;
+    },
+    &quot;stations&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;10:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;50.45&quot;,
+            &quot;longitude&quot;: 30.52,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: &quot;2021-08-03T07:01:43.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-stations--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-stations--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-stations--id-"></code></pre>
+</span>
+<span id="execution-error-GETapi-stations--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-stations--id-"></code></pre>
+</span>
+<form id="form-GETapi-stations--id-" data-method="GET"
+      data-path="api/stations/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-stations--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-stations--id-"
+                    onclick="tryItOut('GETapi-stations--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-stations--id-"
+                    onclick="cancelTryOut('GETapi-stations--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-stations--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/stations/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="GETapi-stations--id-"
+               data-component="url" required  hidden>
+    <br>
+<p>The ID of the station.</p>            </p>
+                    </form>
+
+            <h2 id="restful-api-PUTapi-stations--id-">PUT api/stations/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-PUTapi-stations--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/stations/17"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request PUT \
+    "http://estation/api/stations/17" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;put(
+    'http://estation/api/stations/17',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/stations/17'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('PUT', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-PUTapi-stations--id-">
+</span>
+<span id="execution-results-PUTapi-stations--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-stations--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-stations--id-"></code></pre>
+</span>
+<span id="execution-error-PUTapi-stations--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-stations--id-"></code></pre>
+</span>
+<form id="form-PUTapi-stations--id-" data-method="PUT"
+      data-path="api/stations/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-stations--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-stations--id-"
+                    onclick="tryItOut('PUTapi-stations--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-stations--id-"
+                    onclick="cancelTryOut('PUTapi-stations--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-stations--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/stations/{id}</code></b>
+        </p>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/stations/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="PUTapi-stations--id-"
+               data-component="url" required  hidden>
+    <br>
+<p>The ID of the station.</p>            </p>
+                    </form>
+
+            <h2 id="restful-api-DELETEapi-stations--id-">DELETE api/stations/{id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-stations--id-">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/stations/16"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request DELETE \
+    "http://estation/api/stations/16" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;delete(
+    'http://estation/api/stations/16',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/stations/16'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('DELETE', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-DELETEapi-stations--id-">
+</span>
+<span id="execution-results-DELETEapi-stations--id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-stations--id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-stations--id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-stations--id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-stations--id-"></code></pre>
+</span>
+<form id="form-DELETEapi-stations--id-" data-method="DELETE"
+      data-path="api/stations/{id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-stations--id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-stations--id-"
+                    onclick="tryItOut('DELETEapi-stations--id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-stations--id-"
+                    onclick="cancelTryOut('DELETEapi-stations--id-');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-stations--id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/stations/{id}</code></b>
+        </p>
+                    <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>id</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="id"
+               data-endpoint="DELETEapi-stations--id-"
+               data-component="url" required  hidden>
+    <br>
+<p>The ID of the station.</p>            </p>
+                    </form>
+
+        <h1 id="search-item">Search Item</h1>
+
+    
+
+            <h2 id="search-item-GETapi-station-search">GET api/station/search</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-station-search">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/station/search"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://estation/api/station/search" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://estation/api/station/search',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/station/search'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-GETapi-station-search">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 55
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;success&quot;: true,
+    &quot;payload&quot;: [],
+    &quot;stations&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;10:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;50.45&quot;,
+            &quot;longitude&quot;: 30.52,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: &quot;2021-08-03T07:01:43.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;city&quot;: &quot;Kharkiv&quot;,
+            &quot;hour_start&quot;: &quot;10:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;50.45&quot;,
+            &quot;longitude&quot;: 90.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:17:35.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:17:35.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;city&quot;: &quot;Lviv&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;32.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:19:10.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:19:10.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 4,
+            &quot;city&quot;: &quot;Zhytomir&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;23:00:00&quot;,
+            &quot;latitude&quot;: &quot;52.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:20:27.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:20:27.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 6,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;09:00:00&quot;,
+            &quot;hour_end&quot;: &quot;20:00:00&quot;,
+            &quot;latitude&quot;: &quot;36.45&quot;,
+            &quot;longitude&quot;: 60.45,
+            &quot;created_at&quot;: &quot;2020-09-27T00:30:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T00:30:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 9,
+            &quot;city&quot;: &quot;Kyiv&quot;,
+            &quot;hour_start&quot;: &quot;00:00:00&quot;,
+            &quot;hour_end&quot;: &quot;02:00:00&quot;,
+            &quot;latitude&quot;: &quot;350.45&quot;,
+            &quot;longitude&quot;: 125.56,
+            &quot;created_at&quot;: null,
+            &quot;updated_at&quot;: null
+        },
+        {
+            &quot;id&quot;: 10,
+            &quot;city&quot;: &quot;West Heloisehaven&quot;,
+            &quot;hour_start&quot;: &quot;09:02:52&quot;,
+            &quot;hour_end&quot;: &quot;12:05:59&quot;,
+            &quot;latitude&quot;: &quot;-393.35&quot;,
+            &quot;longitude&quot;: 291.72,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 11,
+            &quot;city&quot;: &quot;Ryleightown&quot;,
+            &quot;hour_start&quot;: &quot;23:01:34&quot;,
+            &quot;hour_end&quot;: &quot;07:09:33&quot;,
+            &quot;latitude&quot;: &quot;24.21&quot;,
+            &quot;longitude&quot;: 165.58,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;city&quot;: &quot;Corwinberg&quot;,
+            &quot;hour_start&quot;: &quot;03:10:56&quot;,
+            &quot;hour_end&quot;: &quot;03:12:38&quot;,
+            &quot;latitude&quot;: &quot;-673.32&quot;,
+            &quot;longitude&quot;: 205.43,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;city&quot;: &quot;Lake Susanaport&quot;,
+            &quot;hour_start&quot;: &quot;00:04:59&quot;,
+            &quot;hour_end&quot;: &quot;05:07:17&quot;,
+            &quot;latitude&quot;: &quot;647.86&quot;,
+            &quot;longitude&quot;: -675.36,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;city&quot;: &quot;North Molliefort&quot;,
+            &quot;hour_start&quot;: &quot;01:02:48&quot;,
+            &quot;hour_end&quot;: &quot;18:06:05&quot;,
+            &quot;latitude&quot;: &quot;-492.46&quot;,
+            &quot;longitude&quot;: -16.33,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;city&quot;: &quot;South Keeleyberg&quot;,
+            &quot;hour_start&quot;: &quot;12:12:11&quot;,
+            &quot;hour_end&quot;: &quot;07:12:56&quot;,
+            &quot;latitude&quot;: &quot;421.18&quot;,
+            &quot;longitude&quot;: -88.92,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 16,
+            &quot;city&quot;: &quot;Port Hettie&quot;,
+            &quot;hour_start&quot;: &quot;11:04:36&quot;,
+            &quot;hour_end&quot;: &quot;12:09:41&quot;,
+            &quot;latitude&quot;: &quot;-284.22&quot;,
+            &quot;longitude&quot;: -291.35,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 17,
+            &quot;city&quot;: &quot;Nyasiaville&quot;,
+            &quot;hour_start&quot;: &quot;10:08:48&quot;,
+            &quot;hour_end&quot;: &quot;14:03:46&quot;,
+            &quot;latitude&quot;: &quot;267.6&quot;,
+            &quot;longitude&quot;: -361.2,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 18,
+            &quot;city&quot;: &quot;Port Vicenteton&quot;,
+            &quot;hour_start&quot;: &quot;13:04:41&quot;,
+            &quot;hour_end&quot;: &quot;23:10:22&quot;,
+            &quot;latitude&quot;: &quot;-133.82&quot;,
+            &quot;longitude&quot;: -811.45,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        },
+        {
+            &quot;id&quot;: 19,
+            &quot;city&quot;: &quot;Paucekstad&quot;,
+            &quot;hour_start&quot;: &quot;21:05:29&quot;,
+            &quot;hour_end&quot;: &quot;08:11:55&quot;,
+            &quot;latitude&quot;: &quot;-936.54&quot;,
+            &quot;longitude&quot;: 154.02,
+            &quot;created_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2020-09-27T02:37:37.000000Z&quot;
+        }
+    ]
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-station-search" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-station-search"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-station-search"></code></pre>
+</span>
+<span id="execution-error-GETapi-station-search" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-station-search"></code></pre>
+</span>
+<form id="form-GETapi-station-search" data-method="GET"
+      data-path="api/station/search"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-station-search', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-station-search"
+                    onclick="tryItOut('GETapi-station-search');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-station-search"
+                    onclick="cancelTryOut('GETapi-station-search');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-station-search" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/station/search</code></b>
+        </p>
+                    </form>
+
+        <h1 id="version">Version</h1>
+
+    
+
+            <h2 id="version-GETapi-version">GET api/version</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-version">
+<blockquote>Example request:</blockquote>
+
+
+<pre><code class="language-javascript">const url = new URL(
+    "http://estation/api/version"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+
+<pre><code class="language-bash">curl --request GET \
+    --get "http://estation/api/version" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre>
+
+<pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://estation/api/version',
+    [
+        'headers' =&gt; [
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+
+<pre><code class="language-python">import requests
+import json
+
+url = 'http://estation/api/version'
+headers = {
+  'Content-Type': 'application/json',
+  'Accept': 'application/json'
+}
+
+response = requests.request('GET', url, headers=headers)
+response.json()</code></pre>
+</span>
+
+<span id="example-responses-GETapi-version">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+x-ratelimit-limit: 60
+x-ratelimit-remaining: 57
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;app-version&quot;: &quot;1.0.0&quot;,
+    &quot;laravel-version&quot;: &quot;8.6.0&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-version" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-version"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-version"></code></pre>
+</span>
+<span id="execution-error-GETapi-version" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-version"></code></pre>
+</span>
+<form id="form-GETapi-version" data-method="GET"
+      data-path="api/version"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-version', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-version"
+                    onclick="tryItOut('GETapi-version');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-version"
+                    onclick="cancelTryOut('GETapi-version');" hidden>Cancel
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-version" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/version</code></b>
+        </p>
+                    </form>
+
+    
+
+        
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="php">php</a>
+                                    <a href="#" data-language-name="python">python</a>
+                            </div>
+            </div>
+</div>
+<script>
+    $(function () {
+        var exampleLanguages = ["javascript","bash","php","python"];
+        setupLanguages(exampleLanguages);
+    });
+</script>
+</body>
+</html>

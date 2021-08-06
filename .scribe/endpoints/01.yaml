@@ -1,0 +1,122 @@
+name: 'RESTFul API'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/stations
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"items":[{"id":1,"city":"Kyiv","hour_start":"10:00:00","hour_end":"20:00:00","latitude":"50.45","longitude":30.52,"created_at":null,"updated_at":"2021-08-03T07:01:43.000000Z"},{"id":2,"city":"Kharkiv","hour_start":"10:00:00","hour_end":"20:00:00","latitude":"50.45","longitude":90.45,"created_at":"2020-09-27T00:17:35.000000Z","updated_at":"2020-09-27T00:17:35.000000Z"},{"id":3,"city":"Lviv","hour_start":"09:00:00","hour_end":"20:00:00","latitude":"32.45","longitude":60.45,"created_at":"2020-09-27T00:19:10.000000Z","updated_at":"2020-09-27T00:19:10.000000Z"},{"id":4,"city":"Zhytomir","hour_start":"09:00:00","hour_end":"23:00:00","latitude":"52.45","longitude":60.45,"created_at":"2020-09-27T00:20:27.000000Z","updated_at":"2020-09-27T00:20:27.000000Z"},{"id":6,"city":"Kyiv","hour_start":"09:00:00","hour_end":"20:00:00","latitude":"36.45","longitude":60.45,"created_at":"2020-09-27T00:30:37.000000Z","updated_at":"2020-09-27T00:30:37.000000Z"},{"id":9,"city":"Kyiv","hour_start":"00:00:00","hour_end":"02:00:00","latitude":"350.45","longitude":125.56,"created_at":null,"updated_at":null},{"id":10,"city":"West Heloisehaven","hour_start":"09:02:52","hour_end":"12:05:59","latitude":"-393.35","longitude":291.72,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":11,"city":"Ryleightown","hour_start":"23:01:34","hour_end":"07:09:33","latitude":"24.21","longitude":165.58,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":12,"city":"Corwinberg","hour_start":"03:10:56","hour_end":"03:12:38","latitude":"-673.32","longitude":205.43,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":13,"city":"Lake Susanaport","hour_start":"00:04:59","hour_end":"05:07:17","latitude":"647.86","longitude":-675.36,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":14,"city":"North Molliefort","hour_start":"01:02:48","hour_end":"18:06:05","latitude":"-492.46","longitude":-16.33,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":15,"city":"South Keeleyberg","hour_start":"12:12:11","hour_end":"07:12:56","latitude":"421.18","longitude":-88.92,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":16,"city":"Port Hettie","hour_start":"11:04:36","hour_end":"12:09:41","latitude":"-284.22","longitude":-291.35,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":17,"city":"Nyasiaville","hour_start":"10:08:48","hour_end":"14:03:46","latitude":"267.6","longitude":-361.2,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":18,"city":"Port Vicenteton","hour_start":"13:04:41","hour_end":"23:10:22","latitude":"-133.82","longitude":-811.45,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"},{"id":19,"city":"Paucekstad","hour_start":"21:05:29","hour_end":"08:11:55","latitude":"-936.54","longitude":154.02,"created_at":"2020-09-27T02:37:37.000000Z","updated_at":"2020-09-27T02:37:37.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - POST
+    uri: api/stations
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/stations/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the station.'
+        required: true
+        example: 2
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":true,"payload":{"id":"1"},"stations":[{"id":1,"city":"Kyiv","hour_start":"10:00:00","hour_end":"20:00:00","latitude":"50.45","longitude":30.52,"created_at":null,"updated_at":"2021-08-03T07:01:43.000000Z"}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/stations/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the station.'
+        required: true
+        example: 17
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/stations/{id}'
+    metadata:
+      title: ''
+      description: ''
+      authenticated: false
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the station.'
+        required: true
+        example: 16
+        type: integer
+    queryParameters: []
+    bodyParameters: []
+    responses: []
+    responseFields: []
