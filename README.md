@@ -4,6 +4,12 @@ This is an API Service which has JSON API and you can create, update, delete, ge
 Also, you are free to search items by any of it's attributes like city or latitude.
 There is also you can search and recieve items at any radius and latitude and longtitude you like.
 
+## Install
+
+1) Run composer update
+2) Copy .env.example as .env
+3) Run this command: php artisan build
+
 ## Examples
 
 You can find examples in public/img directory.
@@ -23,5 +29,9 @@ There is export file for POSTMAN included in root directory. You can import this
 ## Search Functionality
 
 You can search stations within a rectangular shape with specified radius.
+
+## Scribe Documentation Generator
+
+You can use 'php artisan scribe:generate' command to regenerate documentation. Can be used as well as a part of CI\CD process.
 
 ## THIS IS PET-PROJECT AND NOT IS A SEPARATE ENDED MODULE!!! PLEASE DO NOT USE IT AS A PART OF COMMERCIAL PRODUCT.
