@@ -11,9 +11,10 @@ class BuildCommand extends Command
      *
      */
     const APP_CMDS = [
-        'route:cache',
         'migrate',
         'view:cache',
+        'scribe:generate',
+        'route:cache',
         'key:generate'
     ];
 

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "E-station",
-        "_postman_id": "8f777b63-9bb4-4583-9a12-3e852853906f",
+        "_postman_id": "cbf246df-d235-4854-83fc-be94fc570d93",
         "description": "API documentation for Estation API Service.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -181,7 +181,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "2",
+                                    "value": "9",
                                     "description": "The ID of the station."
                                 }
                             ]
@@ -246,7 +246,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "6",
                                     "description": "The ID of the station."
                                 }
                             ]
@@ -283,7 +283,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
+                                    "value": "17",
                                     "description": "The ID of the station."
                                 }
                             ]
