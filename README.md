@@ -13,6 +13,7 @@ There is also you can search and recieve items at any radius and latitude and lo
 ## Examples
 
 You can find examples in public/img directory.
+Documentation about app's API is available with /docs relative directory.
 
 ## Extensions System
 
